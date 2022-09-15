@@ -8,14 +8,14 @@ try
         int a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Введите число B: ");
         int b = Convert.ToInt32(Console.ReadLine());
-        double degree (int a, int b)
-        {
-            double result = Math.Pow(a, b);
-            return result;
-        }
-    Console.WriteLine($"Число ({a}) в степени ({b}) = {degree(a, b)}");
+            double degree (int a, int b)
+                {
+                    double result = Math.Pow(a, b);
+                    return result;
+                }
+        Console.WriteLine($"Число ({a}) в степени ({b}) = {degree(a, b)}");
     }
 catch (SystemException)
-{
-    Console.WriteLine("Нужно было вводить именно число");
-}
+    {
+        Console.WriteLine("Нужно было вводить именно число");
+    }
