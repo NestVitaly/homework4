@@ -1,21 +1,28 @@
 ﻿// Задача 29: Напишите программу, которая задаёт массив из N элементов и выводит их на экран. N - вводится с клавиатуры.
 // Элементы тоже вводятся с клавиатуры.
 
-Console.Write("Введите число ");
-int N = Convert.ToInt32(Console.ReadLine());
-int sum(int N){
-    
-    int count = Convert.ToString(N).Length;
-    int move = 0;
-    int res = 0;
+Console.Write("Введите количество элементов массива: ");
+int array = Convert.ToInt32(Console.ReadLine());
+int [] elements = new int [array];
+ArrayElements(elements);
+ElementsArray(elements);
 
-    for (int i = 0; i < count; i++){
-      move = N - N % 10;
-      res = res + (N - move);
-      N = N / 10;
+void ArrayElements(int[] numbers)
+{
+    Console.WriteLine("Введите элементы массива: ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write($"{i}: ");
+        numbers[i] = Convert.ToInt32(Console.ReadLine());
     }
-   return res;
-  }
-
-int sumNumber = sum(N);
-Console.WriteLine("Сумма цифр в числе: " + sum(N));
+}
+void ElementsArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + "; ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
